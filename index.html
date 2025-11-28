@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MC & HG | Desentupimento e Refrigeração</title>
+    <meta name="description" content="Serviços profissionais de desentupimento e refrigeração. Atendimento 24h com qualidade e garantia.">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome para Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md fixed w-full z-50 top-0 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center gap-2">
+                        <!-- Logo Simples -->
+                        <div class="bg-blue-700 text-white p-2 rounded font-bold text-xl">MC&HG</div>
+                        <span class="font-bold text-xl text-blue-900 tracking-tight hidden sm:block">Desentupimento & Refrigeração</span>
+                    </div>
+                </div>
+                
+                <!-- Menu Desktop -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-blue-600 font-medium transition">Início</a>
+                    <a href="#servicos" class="text-gray-700 hover:text-blue-600 font-medium transition">Serviços</a>
+                    <a href="#galeria" class="text-gray-700 hover:text-blue-600 font-medium transition">Galeria</a>
+                    <a href="#sobre" class="text-gray-700 hover:text-blue-600 font-medium transition">Sobre</a>
+                    <a href="#contato" class="bg-blue-600 text-white px-5 py-2 rounded-full font-medium hover:bg-blue-700 transition shadow-lg transform hover:-translate-y-0.5">
+                        <i class="fab fa-whatsapp mr-2"></i>Orçamento
+                    </a>
+                </div>
+
+                <!-- Botão Menu Mobile -->
+                <div class="flex items-center md:hidden">
+                    <button onclick="toggleMenu()" class="text-gray-700 hover:text-blue-600 focus:outline-none p-2">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menu Mobile (Escondido por padrão) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" onclick="toggleMenu()" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">Início</a>
+                <a href="#servicos" onclick="toggleMenu()" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">Serviços</a>
+                <a href="#galeria" onclick="toggleMenu()" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">Galeria</a>
+                <a href="#contato" onclick="toggleMenu()" class="block px-3 py-2 rounded-md text-base font-medium text-blue-600 font-bold bg-blue-50">Fale Conosco</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg h-screen flex items-center justify-center pt-20">
+        <div class="text-center text-white px-4 max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-4 leading-tight">
+                Soluções Rápidas em <br>
+                <span class="text-blue-300">Desentupimento</span> e <span class="text-cyan-300">Refrigeração</span>
+            </h1>
+            <p class="text-lg md:text-xl mb-8 text-gray-200 font-light">
+                Atendimento ágil, preço justo e serviço garantido para sua casa ou empresa.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button onclick="scrollToContact()" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg shadow-lg transition transform hover:scale-105">
+                    Solicitar Orçamento Gratuito
+                </button>
+                <a href="#servicos" class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 font-bold py-4 px-8 rounded-lg transition">
+                    Ver Nossos Serviços
+                </a>
+            </div>
+            
+            <div class="mt-12 flex justify-center gap-8 text-gray-300">
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-clock text-yellow-400"></i> Atendimento Rápido
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-check-circle text-green-400"></i> Garantia Total
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços -->
+    <section id="servicos" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-blue-600 font-bold tracking-wide uppercase text-sm">O que fazemos</h2>
+                <h3 class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Nossos Serviços Especializados
+                </h3>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
+                    Temos a equipe técnica certa para resolver o seu problema agora mesmo.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Serviço 1 -->
+                <div class="service-card bg-gray-50 p-8 rounded-xl border border-gray-100">
+                    <div class="w-14 h-14 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center mb-6 text-2xl">
+                        <i class="fas fa-toilet"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Desentupimento Geral</h4>
+                    <p class="text-gray-600">
+                        Pias, ralos, vasos sanitários e tanques. Utilizamos equipamentos modernos que resolvem sem quebrar nada.
+                    </p>
+                </div>
+
+                <!-- Serviço 2 -->
+                <div class="service-card bg-gray-50 p-8 rounded-xl border border-gray-100">
+                    <div class="w-14 h-14 bg-cyan-100 text-cyan-600 rounded-lg flex items-center justify-center mb-6 text-2xl">
+                        <i class="fas fa-snowflake"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Ar Condicionado</h4>
+                    <p class="text-gray-600">
+                        Instalação, manutenção preventiva, limpeza química e recarga de gás para todas as marcas.
+                    </p>
+                </div>
+
+                <!-- Serviço 3 -->
+                <div class="service-card bg-gray-50 p-8 rounded-xl border border-gray-100">
+                    <div class="w-14 h-14 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center mb-6 text-2xl">
+                        <i class="fas fa-water"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Limpeza de Caixas de Gordura</h4>
+                    <p class="text-gray-600">
+                        Limpeza completa e higienização de caixas de gordura e inspeção para residências e comércios.
+                    </p>
+                </div>
+
+                <!-- Serviço 4 -->
+                <div class="service-card bg-gray-50 p-8 rounded-xl border border-gray-100">
+                    <div class="w-14 h-14 bg-cyan-100 text-cyan-600 rounded-lg flex items-center justify-center mb-6 text-2xl">
+                        <i class="fas fa-icicles"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Manutenção de Geladeiras</h4>
+                    <p class="text-gray-600">
+                        Conserto de refrigeradores, freezers e balcões refrigerados. Troca de motor, borracha e termostato.
+                    </p>
+                </div>
+
+                <!-- Serviço 5 -->
+                <div class="service-card bg-gray-50 p-8 rounded-xl border border-gray-100">
+                    <div class="w-14 h-14 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center mb-6 text-2xl">
+                        <i class="fas fa-search-location"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Caça Vazamentos</h4>
+                    <p class="text-gray-600">
+                        Identificação precisa de vazamentos ocultos para evitar contas de água altas e danos estruturais.
+                    </p>
+                </div>
+
+                <!-- Serviço 6 -->
+                <div class="service-card bg-gray-50 p-8 rounded-xl border border-gray-100">
+                    <div class="w-14 h-14 bg-cyan-100 text-cyan-600 rounded-lg flex items-center justify-center mb-6 text-2xl">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Contratos de Manutenção</h4>
+                    <p class="text-gray-600">
+                        Planos mensais para empresas, condomínios e restaurantes. Mantenha tudo funcionando sempre.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner Chamada -->
+    <section class="bg-blue-900 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between">
+            <div class="text-white mb-6 md:mb-0 text-center md:text-left">
+                <h3 class="text-2xl font-bold">Emergência? Problema com entupimento ou ar quebrado?</h3>
+                <p class="text-blue-200 mt-2">Atendemos em toda a região com equipe pronta entrega.</p>
+            </div>
+            <button onclick="openWhatsApp()" class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition flex items-center gap-2">
+                <i class="fab fa-whatsapp text-2xl"></i> Chamar no WhatsApp
+            </button>
+        </div>
+    </section>
+
+    <!-- Galeria -->
+    <section id="galeria" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-extrabold text-gray-900">Nossos Trabalhos Recentes</h2>
+                <p class="mt-4 text-gray-500">Confira a qualidade do serviço MC & HG nas fotos abaixo.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                <!-- Foto 1 -->
+                <div class="relative group h-64 overflow-hidden rounded-lg shadow-md cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Manutenção AC" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                        <span class="text-white font-bold text-lg">Manutenção Ar Condicionado</span>
+                    </div>
+                </div>
+                <!-- Foto 2 -->
+                <div class="relative group h-64 overflow-hidden rounded-lg shadow-md cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1585704032915-c3400ca199e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Desentupimento Pia" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                        <span class="text-white font-bold text-lg">Desentupimento Pia</span>
+                    </div>
+                </div>
+                <!-- Foto 3 -->
+                <div class="relative group h-64 overflow-hidden rounded-lg shadow-md cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1574359253456-9d332d73318f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Instalação Comercial" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                        <span class="text-white font-bold text-lg">Refrigeração Comercial</span>
+                    </div>
+                </div>
+                <!-- Foto 4 -->
+                <div class="relative group h-64 overflow-hidden rounded-lg shadow-md cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Hidrojateamento" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                        <span class="text-white font-bold text-lg">Hidrojateamento</span>
+                    </div>
+                </div>
+                <!-- Foto 5 -->
+                <div class="relative group h-64 overflow-hidden rounded-lg shadow-md cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1542013936693-884638332954?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Manutenção Geladeira" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                        <span class="text-white font-bold text-lg">Conserto Geladeira</span>
+                    </div>
+                </div>
+                <!-- Foto 6 -->
+                <div class="relative group h-64 overflow-hidden rounded-lg shadow-md cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Limpeza AC" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                        <span class="text-white font-bold text-lg">Higienização AC</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Sobre e Por que Escolher -->
+    <section id="sobre" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:flex lg:items-center lg:justify-between gap-12">
+                <div class="lg:w-1/2 mb-10 lg:mb-0">
+                    <h2 class="text-3xl font-extrabold text-gray-900 mb-6">Sobre a MC & HG</h2>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        Somos uma empresa dedicada a trazer conforto e tranquilidade para sua casa ou negócio. Com anos de experiência no mercado, a MC & HG une as expertises de **Desentupimento** e **Refrigeração** em um só lugar.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                        Entendemos que um cano entupido ou um ar condicionado quebrado não pode esperar. Por isso, focamos em agilidade, transparência e preço justo.
+                    </p>
+                    
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-700">Técnicos uniformizados e identificados.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-700">Equipamentos de última geração.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-700">Orçamento transparente sem surpresas.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="lg:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Técnico trabalhando" class="rounded-xl shadow-2xl w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-extrabold text-gray-900">Entre em Contato</h2>
+                <p class="mt-4 text-gray-500">Solicite seu orçamento agora mesmo. É rápido e sem compromisso.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Informações -->
+                <div class="bg-white p-8 rounded-xl shadow-md h-full">
+                    <h3 class="text-xl font-bold mb-6 text-gray-800">Canais de Atendimento</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-100 text-blue-600">
+                                    <i class="fab fa-whatsapp text-2xl"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-medium text-gray-900">WhatsApp</h4>
+                                <p class="mt-1 text-gray-500 cursor-pointer hover:text-blue-600" onclick="openWhatsApp()">(11) 96682-4740</p>
+                                <p class="text-sm text-gray-400">Atendimento prioritário</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-100 text-blue-600">
+                                    <i class="fas fa-phone-alt text-2xl"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-medium text-gray-900">Telefone</h4>
+                                <p class="mt-1 text-gray-500">(11) 4044-1070</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-100 text-blue-600">
+                                    <i class="fas fa-envelope text-2xl"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-medium text-gray-900">Email</h4>
+                                <p class="mt-1 text-gray-500">mc-desentupidora@bol.com.br</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-100 text-blue-600">
+                                    <i class="fas fa-map-marker-alt text-2xl"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-medium text-gray-900">Área de Atendimento</h4>
+                                <p class="mt-1 text-gray-500">Atendemos toda a São Paulo e ABC.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulário -->
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <h3 class="text-xl font-bold mb-6 text-gray-800">Envie uma mensagem</h3>
+                    <form id="contactForm" onsubmit="sendToWhatsapp(event)">
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="name">Nome</label>
+                            <input class="shadow appearance-none border rounded w-full py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500" id="name" type="text" placeholder="Seu nome" required>
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="phone">Telefone / WhatsApp</label>
+                            <input class="shadow appearance-none border rounded w-full py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500" id="phone" type="tel" placeholder="(00) 00000-0000" required>
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="service">Serviço de Interesse</label>
+                            <select class="shadow border rounded w-full py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:border-blue-500" id="service">
+                                <option>Desentupimento</option>
+                                <option>Ar Condicionado</option>
+                                <option>Hidrojateamento</option>
+                                <option>Limpeza de Caixa de Gordura/Esgoto</option>
+                                <option>Dedetização</option>
+                                <option>Desratização</option>
+                                <option>Impermeabilização de Caixas D'água/Reservatórios</option>
+                                <option>Outros</option>
+                            </select>
+                        </div>
+                        <div class="mb-6">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="message">Mensagem</label>
+                            <textarea class="shadow appearance-none border rounded w-full py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500" id="message" rows="4" placeholder="Descreva brevemente o problema..."></textarea>
+                        </div>
+                        <button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded focus:outline-none focus:shadow-outline transition" type="submit">
+                            Enviar via WhatsApp
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">MC & HG</h3>
+                    <p class="text-gray-400 text-sm">
+                        Especialistas em Desentupimento e Refrigeração. Soluções de qualidade para residências e empresas.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Links Rápidos</h3>
+                    <ul class="text-gray-400 text-sm space-y-2">
+                        <li><a href="#home" class="hover:text-white">Início</a></li>
+                        <li><a href="#servicos" class="hover:text-white">Serviços</a></li>
+                        <li><a href="#galeria" class="hover:text-white">Galeria</a></li>
+                        <li><a href="#contato" class="hover:text-white">Contato</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Horário</h3>
+                    <p class="text-gray-400 text-sm">
+                        Segunda a Sábado: 08h às 17h<br>
+                        Plantão Emergencial 24h
+                    </p>
+                    <div class="mt-4 flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram text-xl"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-10 pt-6 text-center text-xs text-gray-500">
+                &copy; 2024 MC & HG Desentupimento e Refrigeração. Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão Flutuante WhatsApp -->
+    <a href="https://wa.me/5511966824740" class="whatsapp-float" target="_blank" title="Fale Conosco no WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+</body>
+</html>
